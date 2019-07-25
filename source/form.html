@@ -3,10 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>Вязание на заказ Интернет-магазин «Мишка»</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html"><img class="page-header__logo-image" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина «Мишка»"></a>
+      <a class="page-header__logo" href="index.html"><img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина «Мишка»"></a>
       <button class="js-button-menu" type="button"><span class="visually-hidden">Меню</span></button>
       <nav class="page-header__nav nav">
         <ul class="nav__list">
@@ -46,28 +47,28 @@
             <legend>цвет</legend>
             <ul class="order-form__list">
               <li class="order-form__item">
-                <input class="visually-hidden order-form__input order-form__input--color" type="checkbox" name="color" id="white" checked>
-                <label for="white">Белый</label>
+                <input class="visually-hidden order-form__input order-form__input--color" type="checkbox" name="white" id="white-checkbox" checked>
+                <label for="white-checkbox">Белый</label>
               </li>
               <li class="order-form__item">
-                <input class="visually-hidden order-form__input order-form__input--color" type="checkbox" name="color" id="grey" checked>
-                <label for="grey">Серый</label>
+                <input class="visually-hidden order-form__input order-form__input--color" type="checkbox" name="grey" id="grey-checkbox" checked>
+                <label for="grey-checkbox">Серый</label>
               </li>
               <li class="order-form__item">
-                <input class="visually-hidden order-form__input order-form__input--color" type="checkbox" name="color" id="tiffani">
-                <label for="tiffani">«Тиффани»</label>
+                <input class="visually-hidden order-form__input order-form__input--color" type="checkbox" name="tiffani" id="tiffani-checkbox">
+                <label for="tiffani-checkbox">«Тиффани»</label>
               </li>
               <li class="order-form__item">
-                <input class="visually-hidden order-form__input order-form__input--color" type="checkbox" name="color" id="black">
-                <label for="black">Черный</label>
+                <input class="visually-hidden order-form__input order-form__input--color" type="checkbox" name="black" id="black-checkbox">
+                <label for="black-checkbox">Черный</label>
               </li>
               <li class="order-form__item">
-                <input class="visually-hidden order-form__input order-form__input--color" type="checkbox" name="color" id="pink">
-                <label for="pink">Розовый</label>
+                <input class="visually-hidden order-form__input order-form__input--color" type="checkbox" name="pink" id="pink-checkbox">
+                <label for="pink-checkbox">Розовый</label>
               </li>
               <li class="order-form__item">
-                <input class="visually-hidden order-form__input order-form__input--color" type="checkbox" name="color" id="orange">
-                <label for="orange">Оранжевый</label>
+                <input class="visually-hidden order-form__input order-form__input--color" type="checkbox" name="orange" id="orange-checkbox">
+                <label for="orange-checkbox">Оранжевый</label>
               </li>
             </ul>
           </fieldset>
@@ -88,7 +89,7 @@
           </fieldset>
           <p class="order-form__telefon">
             <label for="telefon-field">тел</label>
-            <input class="order-form__telefon-input" type="text" name="telefon" id="telefon-field" placeholder="+7 xxx xxx xx xx*">
+            <input class="order-form__telefon-input" type="tel" name="telefon" id="telefon-field" placeholder="+7 xxx xxx xx xx*">
           </p>
           <p class="order-form__email">
             <label for="email-field">e-mail</label>
