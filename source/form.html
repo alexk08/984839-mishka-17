@@ -8,7 +8,7 @@
   <body>
     <header class="page-header">
       <a class="page-header__logo" href="index.html"><img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина «Мишка»"></a>
-      <button class="js-button-menu" type="button"><span class="visually-hidden">Меню</span></button>
+      <button class="page-header__button-menu js-button-menu" type="button"><span class="visually-hidden">Меню</span></button>
       <nav class="page-header__nav nav">
         <ul class="nav__list">
           <li class="nav__item"><a href="catalog.html">Каталог товаров</a></li>
@@ -34,11 +34,11 @@
             <legend>тип</legend>
             <ul class="order-form__list">
               <li class="order-form__item">
-                <input class="visually-hidden order-form__input order-form__input--type" type="radio" name="type" id="interior" checked>
+                <input class="visually-hidden order-form__input order-form__input--type" type="radio" name="type" id="interior" value="interior" checked>
                 <label for="interior">Аксессуар для интерьера</label>
               </li>
               <li class="order-form__item">
-                <input class="visually-hidden order-form__input order-form__input--type" type="radio" name="type" id="toy">
+                <input class="visually-hidden order-form__input order-form__input--type" type="radio" name="type" id="toy" value="toy">
                 <label for="toy">Детская игрушка</label>
               </li>
             </ul>
@@ -82,18 +82,18 @@
               <label for="surname-field">Фамилия:</label>
               <input class="order-form__personal-input" type="text" name="surname" id="surname-field" placeholder="Укажите фамилию*">
             </p>
-            <p class="order-form__personal-data">
+            <p class="order-form__personal">
               <label for="patronym-field">Отчество:</label>
               <input class="order-form__personal-input" type="text" name="patronym" id="patronym-field" placeholder="Отчество, если желаете">
             </p>
           </fieldset>
           <p class="order-form__telefon">
             <label for="telefon-field">тел</label>
-            <input class="order-form__telefon-input" type="tel" name="telefon" id="telefon-field" placeholder="+7 xxx xxx xx xx*">
+            <input class="order-form__telefon-input" type="tel" name="telefon" id="telefon-field" placeholder="+7 XXX XXX XX XX*">
           </p>
           <p class="order-form__email">
             <label for="email-field">e-mail</label>
-            <input class="order-form__email-input" type="email" name="email" id="email-field">
+            <input class="order-form__email-input" type="email" name="email" id="email-field" placeholder="Ваш Email*">
           </p>
           <p class="order-form__add">
             <label for="add-field">доп</label>
