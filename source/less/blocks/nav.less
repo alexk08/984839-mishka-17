@@ -1,17 +1,19 @@
-.nav__list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+.nav {
+  &__list {
+    .list-reset;
+  }
 
-.nav__item a {
-  color: #000000;
-}
+  &__item a {
+    color: #000000;
+  }
 
-.nav__search-input {
-  border: none;
-}
+  &__search-input {
+    padding: 0;
+    border: none;
+  }
 
-.nav__search-input::placeholder {
-  color: #000000;
+  &__search-input::placeholder {
+    color: #000000;
+    font-weight: 700;
+  }
 }

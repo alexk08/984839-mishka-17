@@ -1,0 +1,101 @@
+.order-form {
+  &__lead {
+    font-size: 13px;
+    color: @grey;
+
+    margin: 0;
+  }
+
+  &__fieldset {
+    border: none;
+
+    margin: 0;
+    padding: 0;
+
+    legend {
+      font-size: 17px;
+      line-height: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #63d1bb;
+    }
+  }
+
+  &__list {
+    .list-reset;
+  }
+
+  &__item label {
+    font-size: 17px;
+    line-height: 18px;
+    font-weight: 700;
+  }
+
+  &__personal {
+    margin: 0;
+
+    label {
+      font-size: 17px;
+      line-height: 18px;
+      font-weight: 700;
+    }
+  }
+
+  &__personal-input {
+    padding: 0;
+
+    border: none;
+    font-size: 17px;
+    line-height: 18px;
+  }
+
+  &__telefon,
+  &__email,
+  &__add {
+    margin: 0;
+
+    label {
+      font-size: 17px;
+      line-height: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #63d1bb;
+    }
+  }
+
+  &__telefon-input,
+  &__email-input {
+    padding: 0;
+
+    border: none;
+    font-size: 17px;
+    line-height: 18px;
+  }
+
+  &__add-input {
+    padding: 12px 17px;
+    box-sizing: border-box;
+    width: 260px;
+    height: 142px;
+
+    resize: none;
+    border: 2px solid #000000;
+    font-size: 17px;
+    line-height: 18px;
+  }
+
+  &__personal-input::placeholder,
+  &__telefon-input::placeholder,
+  &__email-input::placeholder,
+  &__add-input::placeholder {
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &__note {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 16px;
+    color: @grey;
+  }
+}

@@ -1,0 +1,57 @@
+.reviews {
+  &__title {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+
+    margin: 0;
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__text {
+    margin: 0;
+
+    line-height: 30px;
+    color: @grey;
+  }
+
+  &__author {
+    font-style: normal;
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  &__author span {
+    font-weight: 400;
+    line-height: 30px;
+    color: @grey;
+  }
+
+  &__toggle-prev,
+  &__toggle-next {
+    padding: 0;
+    box-sizing: border-box;
+    width: 50px;
+    height: 26px;
+
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    // border: 1px solid #ececec;
+  }
+
+  &__toggle-prev {
+    background-image: url("../../img/icon-left-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  &__toggle-next {
+    background-image: url("../../img/icon-right-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
