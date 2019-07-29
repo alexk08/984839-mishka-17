@@ -2,7 +2,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: inherit;
 }
 
@@ -22,4 +24,23 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .container {
+    width: 768px;
+    padding: 0 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .container {
+    width: 1150px;
+  }
 }

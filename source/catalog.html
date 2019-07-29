@@ -3,23 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>Каталог товаров Интернет-магазин «Мишка»</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo" href="index.html"><img class="page-header__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина «Мишка»"></a>
-      <button class="page-header__button-menu js-button-menu" type="button"><span class="visually-hidden">Меню</span></button>
       <nav class="page-header__nav nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a>Каталог товаров</a></li>
-          <li class="nav__item"><a href="form.html">Вязание на заказ</a></li>
-          <li class="nav__item">
+        <div class="nav__top-row">
+          <a class="nav__logo" href="index.html"><img class="nav__logo-image" src="img/logo-mobile.svg" width="86"  height="35" alt="Логотип интернет-магазина «Мишка»"></a>
+          <button class="nav__button-menu js-button-menu" type="button"><span class="visually-hidden">Меню</span></button>
+        </div>
+        <ul class="nav__list nav__list--left">
+          <li class="nav__item nav__item--catalog"><a>Каталог товаров</a></li>
+          <li class="nav__item nav__item--form"><a href="form.html">Вязание на заказ</a></li>
+          <li class="nav__item nav__item--delivery"><p>Бесплатная доставка по России</p>
+        </ul>
+        <ul class="nav__list nav__list--right">
+          <li class="nav__item nav__item--search">
             <form class="nav__search-form" action="https://echo.htmlacademy.ru" method="get">
               <label  for="search" class="visually-hidden">Поиск по сайту</label>
               <input class="nav__search-input" type="search" name="search" id="search" placeholder="Поиск по сайту">
             </form>
           </li>
-          <li class="nav__item"><a href="cart.html">Корзина: <span>пока пуста</span></a></li>
+          <li class="nav__item nav__item--cart"><a href="cart.html">Корзина: <span>пока пуста</span></a></li>
+        </ul>
+        <ul class="nav__list nav__list--bottom">
+          <li class="nav__item nav__item--new-goods"><a href="new-goods.html">Новые поступления</a></li>
+          <li class="nav__item nav__item--sale"><a href="sale.html">Распродажа</a></li>
         </ul>
       </nav>
     </header>
