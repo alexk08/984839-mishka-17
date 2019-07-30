@@ -10,7 +10,13 @@
     <header class="page-header">
       <div class="container">
         <nav class="page-header__nav nav">
-          <a class="nav__logo"><img class="nav__logo-image" src="img/logo-mobile.svg" width="86"  height="35" alt="Логотип интернет-магазина «Мишка»"></a>
+          <a class="nav__logo">
+            <picture>
+              <source media="(min-width: 1150px)" alt="Логотип интернет-магазина «Мишка»" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" alt="Логотип интернет-магазина «Мишка»" srcset="img/logo-tablet.svg">
+              <img class="nav__logo-image" src="img/logo-mobile.svg" alt="Логотип интернет-магазина «Мишка»">
+            </picture>
+          </a>
           <button class="nav__button-menu js-button-menu" type="button"><span class="visually-hidden">Меню</span></button>
           <ul class="nav__list nav__list--left">
             <li class="nav__item nav__item--catalog"><a href="catalog.html">Каталог товаров</a></li>
