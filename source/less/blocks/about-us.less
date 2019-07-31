@@ -1,9 +1,21 @@
+.about-us {
+  margin-bottom: 58px;
+}
+
+@media (max-width: (@tablet-width - 1px)) {
+  .about-us .container {
+    padding: 0 30px;
+  }
+}
+
 .about-us__title {
-  padding: 0;
-  margin: 0;
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
+
+  padding: 0;
+  margin: 0;
+  margin-bottom: 28px;
 }
 
 .about-us__list {
@@ -11,4 +23,48 @@
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
+}
+
+.about-us__item {
+  padding-top: 60px;
+  margin-bottom: 25px;
+}
+
+@media(min-width: @tablet-width) {
+  .about-us__title {
+    font-size: 43px;
+    line-height: 50px;
+
+    margin-bottom: 42px;
+  } 
+  
+  .about-us__list {
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  .about-us__wrapper {
+    display: flex;
+  }
+
+  .about-us__list--left,
+  .about-us__list--right {
+    width: 334px;
+  }
+}
+
+@media(min-width: @desktop-width) {
+  .about-us .container {
+    padding-left: 175px;
+  }
+  
+  .about-us__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .about-us__list--left,
+  .about-us__list--right {
+    width: 350px;
+  }
 }

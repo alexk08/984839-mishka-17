@@ -1,57 +1,84 @@
 .reviews {
-  &__title {
-    font-size: 25px;
-    font-weight: 700;
-    line-height: 30px;
+  margin-bottom: 94px;
+  position: relative;
 
-    margin: 0;
-  }
-
-  &__item {
-    margin: 0;
-  }
-
-  &__text {
-    margin: 0;
-
-    line-height: 30px;
-    color: @grey;
-  }
-
-  &__author {
-    font-style: normal;
-    font-size: 17px;
-    font-weight: 700;
-  }
-
-  &__author span {
-    font-weight: 400;
-    line-height: 30px;
-    color: @grey;
-  }
-
-  &__toggle-prev,
-  &__toggle-next {
-    padding: 0;
-    box-sizing: border-box;
-    width: 50px;
-    height: 26px;
-
-    background-color: #ffffff;
-    border: none;
-    cursor: pointer;
-    // border: 1px solid #ececec;
-  }
-
-  &__toggle-prev {
-    background-image: url("../../img/icon-left-arrow.svg");
-    background-repeat: no-repeat;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    background-image: url("../../img/bg-zigzag-line.svg");
+    background-size: 92%;
     background-position: 0 0;
+    background-repeat: repeat;
+    bottom: -51px;
+    left: 0;
   }
+}
 
-  &__toggle-next {
-    background-image: url("../../img/icon-right-arrow.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+@media (max-width: (@tablet-width - 1px)) {
+  .reviews .container {
+    padding: 0 30px;
   }
+}
+
+.reviews__title {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 30px;
+  margin: 0;
+  margin-bottom: 27px;
+}
+
+.reviews__item {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.reviews__text {
+  line-height: 30px;
+  color: @gray;
+
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.reviews__author {
+  font-style: normal;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.reviews__author span {
+  font-weight: 400;
+  line-height: 30px;
+  color: @gray;
+}
+
+.reviews__toggles {
+  display: flex;
+  margin-bottom: 38px;
+}
+
+.reviews__toggle-prev,
+.reviews__toggle-next {
+  padding: 0;
+  box-sizing: border-box;
+  width: 130px;
+  height: 52px;
+  background-color: @white;
+  border: 1px solid @light-gray;
+  cursor: pointer;
+}
+
+.reviews__toggle-prev {
+  background-image: url("../../img/icon-left-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 37px 12px;
+}
+
+.reviews__toggle-next {
+  background-image: url("../../img/icon-right-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 37px 12px;
 }
