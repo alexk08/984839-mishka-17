@@ -1,21 +1,53 @@
 .contacts {
   line-height: 30px;
+  position: relative;
+  margin-bottom: 39px;
+}
 
-  &__title {
-    font-weight: 700;
-    font-size: 18px;
-
-    margin: 0;
+@media (max-width: (@tablet-width - 1px)) {
+  .contacts .container {
+    padding: 0 30px;
   }
+}
 
-  &__email,
-  &__adress {
-    margin: 0;
-    color: @gray;
-  }
+.contacts__title {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 26px;
+  margin-left: -3px;
+}
 
-  &__email a {
-    color: @gray;
-    border-bottom: 1px solid @light-green;
-  }
+.contacts__email,
+.contacts__adress {
+  margin: 0;
+  color: @gray;
+  display: flex;
+}
+
+.contacts__email {
+  margin-bottom: 29px;
+}
+
+.contacts__adress {
+  margin-bottom: 533px;
+}
+
+.contacts__email span,
+.contacts__adress span {
+  width: 78px;
+}
+
+.contacts__adress span:nth-child(2) {
+  width: 145px;
+}
+
+.contacts__email a {
+  color: @gray;
+  border-bottom: 1px solid @light-green;
+}
+
+.contacts__map {
+  position: absolute;
+  top: 274px;
 }

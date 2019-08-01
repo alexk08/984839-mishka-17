@@ -1,5 +1,5 @@
 .week-product {
-  margin-bottom: 73px;
+  margin-bottom: 69px;
   position: relative;
 
   &::before {
@@ -29,7 +29,7 @@
 
   margin: 0;
   padding: 0;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .week-product__mark {
@@ -41,7 +41,7 @@
 
   margin: 0;
   padding: 0;
-  margin-bottom: 27px;
+  margin-bottom: 22px;
 }
 
 .week-product__description {
@@ -49,7 +49,7 @@
 
   margin: 0;
   padding: 0;
-  margin-bottom: 25px;
+  margin-bottom: 27px;
 }
 
 .week-product__properties,
@@ -69,7 +69,7 @@
   display: flex;
   padding: 0;
   padding-bottom: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
   border-bottom: 1px solid @light-gray;
 }
 
@@ -83,7 +83,8 @@
 
 .week-product__image {
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 25px;
+  background-color: @gray-bg;
 }
 
 .week-product__price {
@@ -99,7 +100,7 @@
 
 @media(min-width: @tablet-width) {
   .week-product {
-    margin-bottom: 120px;
+    margin-bottom: 118px;
 
     &::before {
       height: 14px;
@@ -108,11 +109,16 @@
     }
   }
 
+  .week-product .container {
+    position: relative;
+  }
+
   .week-product__title {
     font-size: 43px;
     line-height: 50px;
 
-    margin-bottom: 50px;
+    margin-bottom: 49px;
+    margin-left: -3px;
   }
 
   .week-product__mark,
@@ -127,13 +133,13 @@
     width: 75px;
     margin: 0;
 
-    right: 78px;
-    top: 15px;
+    right: 75px;
+    top: 12px;
   }
 
   .week-product__image {
     margin: 0;
-    
+
     bottom: 0;
     right: 50px;
   }
@@ -163,7 +169,7 @@
   .week-product__price {
     font-size: 20px;
 
-    margin-bottom: 30px;
+    margin-bottom: 34px;
   }
 
   .week-product__value {
@@ -181,8 +187,8 @@
 
 @media(min-width: @desktop-width) {
   .week-product {
-    margin-bottom: 160px;
-    
+    margin-bottom: 156px;
+
     &::before {
       content: "";
       height: 23px;
@@ -195,12 +201,13 @@
     font-size: 53px;
     line-height: 57px;
 
-    margin-bottom: 57px;
+    margin-bottom: 49px;
     padding-left: 175px;
   }
 
   .week-product__mark {
-    left: 97px;
+    left: 94px;
+    top: 16px;
   }
 
   .week-product__left-column {
@@ -212,7 +219,12 @@
   }
 
   .week-product__properties {
-    margin-bottom: 100px;
+    margin-bottom: 101px;
+  }
+
+  .week-product__wrapper {
+    padding-bottom: 12px;
+    margin-bottom: 7px;
   }
 
   .week-product__image {

@@ -1,5 +1,5 @@
 .reviews {
-  margin-bottom: 94px;
+  margin-bottom: 86px;
   position: relative;
 
   &::before {
@@ -27,12 +27,13 @@
   font-weight: 700;
   line-height: 30px;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 24px;
+  margin-left: -3px;
 }
 
 .reviews__item {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
 }
 
 .reviews__text {
@@ -40,7 +41,7 @@
   color: @gray;
 
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 }
 
 .reviews__author {
@@ -53,6 +54,9 @@
   font-weight: 400;
   line-height: 30px;
   color: @gray;
+
+  display: block;
+  padding-top: 3px;
 }
 
 .reviews__toggles {
@@ -84,10 +88,12 @@
 @media(min-width: @tablet-width) {
   .reviews {
     margin-bottom: 200px;
-
-    background-image: url("../../img/review@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
+    // padding-top: 77px;
+    // padding-bottom: 16px;
+//
+    // background-image: url("../../img/review@1x.jpg");
+    // background-repeat: no-repeat;
+    // background-position: 0 0;
 
     &::before {
       height: 14px;
@@ -96,16 +102,29 @@
     }
   }
 
+  .reviews .container {
+    position: relative;
+
+    // margin-bottom: 200px;
+    padding-top: 77px;
+    padding-bottom: 16px;
+
+    background-color: @gray-bg;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
   .reviews__title {
     font-size: 43px;
     line-height: 50px;
 
-    margin-bottom: 60px;
+    margin-bottom: 49px;
+    margin-left: -5px;
   }
 
   .reviews__text {
     font-size: 17px;
-    margin-bottom: 60px;
+    margin-bottom: 57px;
   }
 
   .reviews__author {
@@ -117,6 +136,8 @@
 
   .reviews__author span {
     font-size: 17px;
+    display: block;
+    padding-top: 4px;
   }
 
   .reviews__toggles {
@@ -124,7 +145,7 @@
 
     position: absolute;
     right: 50px;
-    bottom: 10px;
+    bottom: 62px;
   }
 
   .reviews__toggle-prev,
@@ -150,6 +171,44 @@
 
     position: absolute;
     right: 50px;
-    top: 0;
+    top: 79px;
   }
+}
+
+@media(min-width: @desktop-width) {
+  .reviews .container {
+    background-position: 50px 7px;
+    padding-bottom: 65px;
+  }
+
+  .reviews .container {
+    padding-left: 225px;
+  }
+
+  .reviews__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .reviews__text {
+    width: 770px;
+    margin-bottom: 39px;
+  }
+
+  .reviews__author {
+    font-size: 17px;
+  }
+
+  .reviews__author span {
+    padding-top: 3px;
+  }
+
+  .reviews__button-write {
+    top: 86px;
+  }
+
+  .reviews__toggles {
+    bottom: 111px;
+  }
+
 }

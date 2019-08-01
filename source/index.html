@@ -118,41 +118,50 @@
       </section>
 
       <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <p class="contacts__email">
-          <span>e-mail:</span>
-          <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-        </p>
-        <p class="contacts__adress">
-          <span>адрес:</span>
-          <span>г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span>
-        </p>
-        <div class="contacts__map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" allowfullscreen></iframe>
+        <div class="container">
+          <h2 class="contacts__title">Контакты</h2>
+          <p class="contacts__email">
+            <span>e-mail:</span>
+            <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+          </p>
+          <p class="contacts__adress">
+            <span>адрес:</span>
+            <span>г. Санкт-Петербург, ул. Большая Конюшенная,<br>д. 19/8, офис 101</span>
+          </p>
+          <a class="contacts__button-write-us button" href="write-us.html">Напишите нам</a>
         </div>
-        <a class="contacts__button-write-us button" href="write-us.html">Напишите нам</a>
+        <picture>
+          <source media="(min-width: 1150px)" alt="Адрес интернет-магазина «Мишка» г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101" srcset="img/map-desktop@1x.jpg">
+          <source media="(min-width: 768px)" alt="Адрес интернет-магазина «Мишка» г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101" srcset="img/map-tablet@1x.jpg">
+          <img class="contacts__map" src="img/map-mobile@1x.jpg" alt="Адрес интернет-магазина «Мишка» г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+        </picture>
+          <!-- <div class="contacts__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" allowfullscreen></iframe>
+          </div> -->
       </section>
 
       <section class="modal-add-cart">
-        <h2 class="modal-add-cart__title">Добавить в корзину</h2>
-        <form class="modal-add-cart__form" action="https://echo.htmlacademy.ru" method="get">
-          <p class="modal-add-cart__legend">Выберите размер:</p>
-          <ul class="modal-add-cart__list">
-            <li class="modal-add-cart__item">
-              <input class="visually-hidden modal-add-cart__input" type="radio" name="size" value="s" id="size-s" checked>
-              <label class="modal-add-cart__label" for="size-s">S</label>
-            </li>
-            <li class="modal-add-cart__item">
-              <input class="visually-hidden modal-add-cart__input" type="radio" name="size" value="m" id="size-m">
-              <label class="modal-add-cart__label" for="size-m">M</label>
-            </li>
-            <li class="modal-add-cart__item">
-              <input class="visually-hidden modal-add-cart__input" type="radio" name="size" value="l" id="size-l">
-              <label class="modal-add-cart__label" for="size-l">L</label>
-            </li>
-          </ul>
-          <button class="modal-add-cart__to-cart-button button" type="submit">Добавить</button>
-        </form>
+        <div class="container">
+          <h2 class="modal-add-cart__title">Добавить в корзину</h2>
+          <form class="modal-add-cart__form" action="https://echo.htmlacademy.ru" method="get">
+            <p class="modal-add-cart__legend">Выберите размер:</p>
+            <ul class="modal-add-cart__list">
+              <li class="modal-add-cart__item">
+                <input class="visually-hidden modal-add-cart__input" type="radio" name="size" value="s" id="size-s" checked>
+                <label class="modal-add-cart__label" for="size-s">S</label>
+              </li>
+              <li class="modal-add-cart__item">
+                <input class="visually-hidden modal-add-cart__input" type="radio" name="size" value="m" id="size-m">
+                <label class="modal-add-cart__label" for="size-m">M</label>
+              </li>
+              <li class="modal-add-cart__item">
+                <input class="visually-hidden modal-add-cart__input" type="radio" name="size" value="l" id="size-l">
+                <label class="modal-add-cart__label" for="size-l">L</label>
+              </li>
+            </ul>
+            <button class="modal-add-cart__to-cart-button button" type="submit">Добавить</button>
+          </form>
+        </div>
       </section>
     </main>
 

@@ -1,10 +1,27 @@
 .copyright {
   margin: 0;
   padding: 0;
+  width: 182px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  &__text {
-    font-size: 19px;
-    line-height: 18px;
-    font-weight: 700;
+.copyright__text {
+  font-size: 19px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.copyright__link {
+  &::before {
+    content: "";
+    width: 27px;
+    height: 34px;
+    background-image: url("../../img/logo-htmlacademy.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    display: block;
   }
 }
+

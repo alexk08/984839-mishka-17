@@ -4,7 +4,7 @@
   background-repeat: no-repeat;
   background-position: 50% -18px;
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 }
 
 .promo__title {
@@ -14,13 +14,13 @@
   text-align: center;
 
   margin: 0 auto;
-  margin-top: 88px;
+  margin-top: 70px;
   width: 260px;
 }
 
 .promo__list {
   .list-reset;
-  margin-top: 104px;
+  margin-top: 122px;
 }
 
 .promo__item a {
@@ -39,24 +39,28 @@
 
 .promo__item a {
   display: block;
-  padding: 27px 0 28px 30px;
+  padding: 30px 0 25px 28px;
+}
+
+.promo__item--toys a {
+  padding: 25px 0 30px 28px;
 }
 
 @media(min-width: @tablet-width) {
   .promo {
     background-image: url("../../img/hero-tablet@1x.jpg");
     background-position: 50% 0;
-    margin-top: -63px;
-    margin-bottom: 50px;
+    margin-top: -60px;
+    margin-bottom: 41px;
 
     &::before {
       content: "";
       position: absolute;
       width: 100%;
-      height: 18px;
+      height: 24px;
       background-image: url("../../img/bg-zigzag-fill.svg");
-      background-size: 86%;
-      background-position: -14px 0;
+      background-size: 100%;
+      background-position: 0 0;
       background-repeat: repeat;
       top: 823px;
       left: 0;
@@ -67,14 +71,14 @@
     font-size: 43px;
     line-height: 50px;
 
-    margin-top: 160px;
+    margin-top: 155px;
     width: 500px;
   }
 
   .promo__list {
     display: flex;
     justify-content: center;
-    margin-top: 366px;
+    margin-top: 372px;
   }
 
   .promo__item {
@@ -84,18 +88,17 @@
   .promo__item a {
     font-size: 20px;
     line-height: 30px;
-    padding: 30px 0 30px 30px;
+    padding: 28px 0 35px 34px;
   }
 }
 
 @media(min-width: @desktop-width) {
   .promo {
-    margin-top: -64px;
-    margin-bottom: 130px;
-    
+    margin-top: -59px;
+    margin-bottom: 109px;
+
     &::before {
-      background-size: 92%;
-      background-position: -8px 0;
+      height: 34px;
       top: 818px;
     }
   }
@@ -105,14 +108,15 @@
     line-height: 57px;
 
     width: 615px;
-    margin-top: 152px;
+    margin-top: 155px;
   }
 
   .promo__list {
-    margin-top: 360px;
+    margin-top: 358px;
   }
 
   .promo__item a {
     padding-left: 36px;
+    padding-bottom: 45px;
   }
 }
