@@ -119,22 +119,26 @@
 
       <section class="contacts">
         <div class="container">
-          <h2 class="contacts__title">Контакты</h2>
-          <p class="contacts__email">
-            <span>e-mail:</span>
-            <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-          </p>
-          <p class="contacts__adress">
-            <span>адрес:</span>
-            <span>г. Санкт-Петербург, ул. Большая Конюшенная,<br>д. 19/8, офис 101</span>
-          </p>
-          <a class="contacts__button-write-us button" href="write-us.html">Напишите нам</a>
+          <div class="contacts__wrapper">
+            <h2 class="contacts__title">Контакты</h2>
+            <div class="contacts__row">
+              <p class="contacts__email">
+                <span>e-mail:</span>
+                <a href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+              </p>
+              <p class="contacts__adress">
+                <span>адрес:</span>
+                <span>г. Санкт-Петербург,<br>ул. Большая Конюшенная,<br>д. 19/8, офис 101</span>
+              </p>
+            </div>
+            <a class="contacts__button-write-us button" href="write-us.html">Напишите нам</a>
+          </div> 
+          <picture>
+            <source media="(min-width: 1150px)" alt="Адрес интернет-магазина «Мишка» г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101" srcset="img/map-desktop@1x.jpg">
+            <source media="(min-width: 768px)" alt="Адрес интернет-магазина «Мишка» г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101" srcset="img/map-tablet@1x.jpg">
+            <img class="contacts__map" src="img/map-mobile@1x.jpg" alt="Адрес интернет-магазина «Мишка» г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+          </picture>
         </div>
-        <picture>
-          <source media="(min-width: 1150px)" alt="Адрес интернет-магазина «Мишка» г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101" srcset="img/map-desktop@1x.jpg">
-          <source media="(min-width: 768px)" alt="Адрес интернет-магазина «Мишка» г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101" srcset="img/map-tablet@1x.jpg">
-          <img class="contacts__map" src="img/map-mobile@1x.jpg" alt="Адрес интернет-магазина «Мишка» г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
-        </picture>
           <!-- <div class="contacts__map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" allowfullscreen></iframe>
           </div> -->
@@ -166,18 +170,20 @@
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item"><a class="social__link social__link--insta" href="https://instagram.com"><span class="visually-hidden">Instagram</span></a></li>
-          <li class="social__item"><a class="social__link social__link--facebook" href="https://facebook.com"><span class="visually-hidden">Facebook</span></a></li>
-          <li class="social__item"><a class="social__link social__link--twitter" href="https://twitter.com"><span class="visually-hidden">Twitter</span></a></li>
-        </ul>
+      <div class="container">
+        <a  class="page-footer__logo"><img src="img/logo-footer.svg" width="102" height="34" alt="Логотип интернет-магазина «Мишка»"></a>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item"><a class="social__link social__link--insta" href="https://instagram.com"><span class="visually-hidden">Instagram</span></a></li>
+            <li class="social__item"><a class="social__link social__link--facebook" href="https://facebook.com"><span class="visually-hidden">Facebook</span></a></li>
+            <li class="social__item"><a class="social__link social__link--twitter" href="https://twitter.com"><span class="visually-hidden">Twitter</span></a></li>
+          </ul>
+        </div>
+        <p class="page-footer__copyright copyright">
+          <span class="copyright__text">Разработано</span>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"><span class="visually-hidden">html academy</span></a>
+        </p>
       </div>
-      <p class="page-footer__copyright copyright">
-        <span class="copyright__text">Разработано</span>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank"><span class="visually-hidden">html academy</span></a>
-      </p>
     </footer>
-
   </body>
 </html>
