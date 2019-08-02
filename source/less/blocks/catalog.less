@@ -1,14 +1,26 @@
 @media (max-width: (@tablet-width - 1px)) {
-    .catalog .container {
-      padding: 0 30px;
-    }
+  .catalog .container {
+    padding: 0 30px;
   }
+}
 
+.catalog__item {
+  margin-bottom: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__item {
+    margin-bottom: 54px;
+  }
+}
+
+@media (min-width: @desktop-width) {
   .catalog .container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
   }
 
   .catalog__item {
-    margin-bottom: 59px;
+    margin-bottom: 58px;
   }
+}
