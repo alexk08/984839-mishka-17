@@ -1,21 +1,138 @@
 .contacts {
   line-height: 30px;
+  margin-bottom: 39px;
+}
 
-  &__title {
-    font-weight: 700;
-    font-size: 18px;
+.contacts .container {
+  position: relative;
+}
 
+.contacts__wrapper {
+  padding: 0 30px;
+}
+
+.contacts__title {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 26px;
+  margin-left: -3px;
+}
+
+.contacts__email,
+.contacts__adress {
+  margin: 0;
+  color: @gray;
+  display: flex;
+}
+
+.contacts__email {
+  margin-bottom: 29px;
+}
+
+.contacts__row {
+  margin-bottom: 533px;
+}
+
+.contacts__email span,
+.contacts__adress span {
+  width: 78px;
+}
+
+.contacts__adress span:nth-child(2) {
+  width: 145px;
+}
+
+.contacts__email a {
+  color: @gray;
+  border-bottom: 1px solid @light-green;
+}
+
+.contacts__map {
+  position: absolute;
+  top: 274px;
+}
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    margin-bottom: 57px;
+  }
+
+  .contacts__wrapper {
+    padding: 0;
+  }
+
+  .contacts__title {
+    font-size: 43px;
+    line-height: 50px;
+    margin-bottom: 49px;
+  }
+
+  .contacts__row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 568px;
+  }
+
+  .contacts__email,
+  .contacts__adress {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .contacts__email {
+    width: 334px;
+  }
+
+  .contacts__adress span:nth-child(2) {
+    width: 230px;
+  }
+
+  .contacts__button-write-us {
+    margin: 0 auto;
+    width: 230px;
+  }
+
+  .contacts__map {
+    top: 245px;
+    left: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    position: static;
+    margin-bottom: 96px;
+  }
+
+  .contacts .container {
+    padding-left: 225px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contacts__wrapper {
+    padding-top: 70px;
+  }
+
+  .contacts__title {
+    font-size: 53px;
+    line-height: 57px;
+
+    margin-left: -6px;
+    margin-bottom: 49px;
+  }
+
+  .contacts__row {
+    flex-direction: column;
+    margin-bottom: 79px;
+  }
+
+  .contacts__button-write-us {
     margin: 0;
   }
 
-  &__email,
-  &__adress {
-    margin: 0;
-    color: @grey;
-  }
-
-  &__email a {
-    color: @grey;
-    border-bottom: 1px solid #62d1ba;
+  .contacts__map {
+    position: static;
   }
 }

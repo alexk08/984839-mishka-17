@@ -1,11 +1,45 @@
 .page-header {
-  background-color: #ffffff;
   font-size: 17px;
   font-weight: 700;
+}
+// @media (max-width: (@tablet-width - 1px)) {
+//   .page-header .container {
+//     padding: 0;
+//   }
+// }
 
-  &__button-menu {
-    padding: 0;
-    border: none;
-    background-color: #ffffff;
+@media (min-width: @tablet-width) {
+  .page-header {
+    position: relative;
+  }
+
+  .page-header::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: @light-gray;
+    top: 88px;
+    left: 0;
   }
 }
+// .page-header__top-row {
+// min-height: 79px;
+// position: relative;
+// display: flex;
+// justify-content: center;
+// align-items: center;
+// border-top: 1px solid @light-gray;
+
+// box-shadow: inset 0 -1px 0 0 @light-gray;
+// }
+// .page-header__nav {
+//   min-height: 316px;
+// }
+
+// @media (min-width: @tablet-width) {
+//   .page-header__wrapper {
+//     flex-direction: row;
+//     width: 768px;
+//   }
+// }
