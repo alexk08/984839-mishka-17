@@ -1,101 +1,145 @@
-.order-form {
-  &__lead {
-    font-size: 13px;
-    color: @gray;
-
-    margin: 0;
-  }
-
-  &__fieldset {
-    border: none;
-
-    margin: 0;
-    padding: 0;
-
-    legend {
-      font-size: 17px;
-      line-height: 16px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: @light-green;
-    }
-  }
-
-  &__list {
-    .list-reset;
-  }
-
-  &__item label {
-    font-size: 17px;
-    line-height: 18px;
-    font-weight: 700;
-  }
-
-  &__personal {
-    margin: 0;
-
-    label {
-      font-size: 17px;
-      line-height: 18px;
-      font-weight: 700;
-    }
-  }
-
-  &__personal-input {
-    padding: 0;
-
-    border: none;
-    font-size: 17px;
-    line-height: 18px;
-  }
-
-  &__telefon,
-  &__email,
-  &__add {
-    margin: 0;
-
-    label {
-      font-size: 17px;
-      line-height: 16px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: @light-green;
-    }
-  }
-
-  &__telefon-input,
-  &__email-input {
-    padding: 0;
-
-    border: none;
-    font-size: 17px;
-    line-height: 18px;
-  }
-
-  &__add-input {
-    padding: 12px 17px;
-    box-sizing: border-box;
-    width: 260px;
-    height: 142px;
-
-    resize: none;
-    border: 2px solid @black;
-    font-size: 17px;
-    line-height: 18px;
-  }
-
-  &__personal-input::placeholder,
-  &__telefon-input::placeholder,
-  &__email-input::placeholder,
-  &__add-input::placeholder {
-    color: rgba(68, 68, 68, 0.3);
-  }
-
-  &__note {
-    margin: 0;
-
-    font-size: 14px;
-    line-height: 16px;
-    color: @gray;
+@media (max-width: (@tablet-width - 1px)) {
+  .order-form .container {
+    padding: 0 30px;
   }
 }
+
+.order-form__lead {
+  font-size: 13px;
+  color: @gray;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.order-form__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 18px;
+
+  &--color {
+    margin-bottom: 0;
+  }
+
+  &--personal {
+    margin-bottom: 9px;
+  }
+}
+
+.order-form__legend {
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @light-green;
+  margin-bottom: 33px;
+
+  &--color {
+    margin-bottom: 36px;
+  }
+
+  &--personal {
+    margin-bottom: 29px;
+  }
+}
+
+.order-form__list {
+  .list-reset;
+}
+
+.order-form__item {
+  margin-bottom: 25px;
+  padding-left: 62px;
+
+  &--color {
+    margin-bottom: 43px;
+  }
+
+  &--personal {
+    padding-left: 0;
+    margin-bottom: 38px;
+  }
+}
+
+.order-form__label {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  display: block;
+
+  &--personal {
+    margin-bottom: 12px;
+  }
+
+  &--telefon,
+  &--email,
+  &-add {
+    line-height: 16px;
+    text-transform: uppercase;
+    color: @light-green;
+    margin-bottom: 19px;
+  }
+}
+
+.order-form__input {
+  &--personal {
+    padding: 0;
+
+    border: none;
+    font-size: 17px;
+    line-height: 18px;
+
+    &::placeholder {
+      color: rgba(68, 68, 68, 0.3);
+    }
+  }
+}
+
+.order-form__telefon,
+.order-form__email,
+.order-form__add {
+  margin: 0;
+}
+
+.order-form__telefon-input,
+.order-form__email-input {
+  padding: 0;
+
+  border: none;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.order-form__add-input {
+  padding: 12px 17px;
+  box-sizing: border-box;
+  width: 260px;
+  height: 142px;
+
+  resize: none;
+  border: 2px solid @black;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+// .order-form__personal-input::placeholder,
+.order-form__telefon-input::placeholder,
+.order-form__email-input::placeholder,
+.order-form__add-input::placeholder {
+  color: rgba(68, 68, 68, 0.3);
+}
+
+.order-form__telefon-input {
+  &::placeholder {
+    font-size: 19px;
+  }
+}
+
+.order-form__note {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: @gray;
+}
+
