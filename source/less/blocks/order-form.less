@@ -1,101 +1,582 @@
-.order-form {
-  &__lead {
-    font-size: 13px;
-    color: @gray;
+@media (max-width: (@tablet-width - 1px)) {
+  .order-form .container {
+    padding: 0 30px;
+  }
+}
 
-    margin: 0;
+.order-form__lead {
+  font-size: 13px;
+  color: @gray;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.order-form__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 18px;
+
+  &--color {
+    margin-bottom: 0;
   }
 
-  &__fieldset {
-    border: none;
+  &--personal {
+    margin-bottom: 9px;
+  }
+}
 
-    margin: 0;
-    padding: 0;
+.order-form__legend {
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: @light-green;
 
-    legend {
-      font-size: 17px;
-      line-height: 16px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: @light-green;
+  display: block;
+  margin-bottom: 33px;
+  position: relative;
+
+  &--color {
+    margin-bottom: 36px;
+  }
+
+  &--personal {
+    margin-bottom: 29px;
+  }
+
+  &::after {
+    content: "";
+
+    width: 76%;
+    height: 1px;
+    background-color: @light-green;
+    position: absolute;
+    right: 0;
+    top: 7px;
+  }
+}
+
+.order-form__list {
+  .list-reset;
+}
+
+.order-form__item {
+  margin-bottom: 25px;
+
+  &--color {
+    margin-bottom: 43px;
+  }
+
+  &--personal {
+    padding-left: 0;
+    margin-bottom: 23px;
+  }
+}
+
+.order-form__label {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  display: block;
+
+  &--type,
+  &--color {
+    padding-left: 62px;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+
+      width: 40px;
+      height: 39px;
+      border: 2px solid @gray;
+      position: absolute;
+      left: 0;
+      top: -10px;
     }
   }
 
-  &__list {
-    .list-reset;
-  }
-
-  &__item label {
-    font-size: 17px;
-    line-height: 18px;
-    font-weight: 700;
-  }
-
-  &__personal {
-    margin: 0;
-
-    label {
-      font-size: 17px;
-      line-height: 18px;
-      font-weight: 700;
+  &--type {
+    &::before {
+      border-radius: 50%;
     }
   }
 
-  &__personal-input {
-    padding: 0;
-
-    border: none;
-    font-size: 17px;
-    line-height: 18px;
-  }
-
-  &__telefon,
-  &__email,
-  &__add {
-    margin: 0;
-
-    label {
-      font-size: 17px;
-      line-height: 16px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: @light-green;
+  &--color {
+    &::before {
+      top: -11px;
     }
   }
 
-  &__telefon-input,
-  &__email-input {
-    padding: 0;
+  &--telefon,
+  &--email,
+  &--add {
+    line-height: 16px;
+    text-transform: uppercase;
+    color: @light-green;
+    margin-bottom: 7px;
+    position: relative;
 
-    border: none;
-    font-size: 17px;
-    line-height: 18px;
+    &::after {
+      content: "";
+
+      width: 76%;
+      height: 1px;
+      background-color: @light-green;
+      position: absolute;
+      right: 0;
+      top: 7px;
+    }
   }
 
-  &__add-input {
-    padding: 12px 17px;
+  &--add {
+    margin-bottom: 24px;
+  }
+
+  &--email {
+    &::after {
+      width: 69%;
+    }
+  }
+}
+
+.order-form__input--type:checked + label::after {
+  content: "";
+
+  width: 16px;
+  height: 16px;
+  background-color: @light-green;
+  border-radius: 50%;
+  position: absolute;
+  left: 12px;
+  top: 2px;
+}
+
+.order-form__input--color:checked + label::after {
+  content: "";
+
+  width: 33px;
+  height: 23px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 70%;
+  position: absolute;
+  left: 8px;
+  top: 1px;
+}
+
+.order-form__input {
+  padding: 15px 0 16px;
+  border: none;
+  border-bottom: 2px solid @black;
+  width: 100%;
+
+  font-size: 17px;
+  line-height: 18px;
+
+  &--personal {
+    &::placeholder {
+      color: rgba(68, 68, 68, 0.3);
+    }
+  }
+
+  &--telefon {
+    width: 100%;
+    padding-right: 40px;
+    border: none;
+    border-bottom: 2px solid @black;
+
+    &::placeholder {
+      color: rgba(68, 68, 68, 0.3);
+      font-size: 19px;
+    }
+  }
+
+  &--email {
+    width: 100%;
+    padding-right: 40px;
+    border: none;
+    border-bottom: 2px solid @black;
+
+    &::placeholder {
+      color: rgba(68, 68, 68, 0.3);
+    }
+  }
+
+  &--add {
+    padding: 14px 15px;
     box-sizing: border-box;
-    width: 260px;
+    width: 100%;
     height: 142px;
-
     resize: none;
     border: 2px solid @black;
+
+    &::placeholder {
+      color: rgba(68, 68, 68, 0.3);
+    }
+  }
+}
+
+.order-form__field {
+  margin: 0;
+  margin-bottom: 33px;
+
+  &--add {
+    margin-bottom: 10px;
+  }
+
+  &--telefon .container {
+    position: relative;
+
+    &::after {
+      content: "";
+
+      width: 25px;
+      height: 24px;
+      background-image: url("../img/icon-phone.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      position: absolute;
+      right: 38px;
+      bottom: 15px;
+    }
+  }
+
+  &--email .container {
+    position: relative;
+
+    &::after {
+      content: "";
+
+      width: 32px;
+      height: 21px;
+      background-image: url("../img/icon-mail.svg");
+      background-repeat: no-repeat;
+      background-position: 0 -5px;
+      position: absolute;
+      right: 34px;
+      bottom: 13px;
+    }
+  }
+}
+
+.order-form__note {
+  margin: 0;
+  margin-bottom: 32px;
+
+  font-size: 14px;
+  line-height: 16px;
+  color: @gray;
+}
+
+.order-form__send-button {
+  margin-bottom: 54px;
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form__lead {
     font-size: 17px;
-    line-height: 18px;
+    line-height: 30px;
+    margin-bottom: 73px;
   }
 
-  &__personal-input::placeholder,
-  &__telefon-input::placeholder,
-  &__email-input::placeholder,
-  &__add-input::placeholder {
-    color: rgba(68, 68, 68, 0.3);
+  .order-form__flex-container {
+    display: flex;
   }
 
-  &__note {
+  .order-form__legend {
+    width: 167px;
+
+    &::after {
+      display: none;
+    }
+
+    &--personal {
+      padding-top: 21px;
+    }
+  }
+
+  .order-form__item {
+    margin-bottom: 57px;
+
+    &--color {
+      width: 239px;
+
+      &:nth-child(2n+1) {
+        flex-grow: 1;
+      }
+    }
+
+    &--personal {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 20px;
+    }
+  }
+
+  .order-form__label {
+    &--type,
+    &--color {
+      padding-left: 80px;
+      font-size: 19px;
+
+      &::before {
+        width: 52px;
+        height: 52px;
+        left: 0;
+        top: -16px;
+      }
+    }
+
+    &--color {
+      &::before {
+        width: 54px;
+        top: -15px;
+      }
+    }
+
+    &--personal {
+      margin-right: 26px;
+      font-size: 19px;
+    }
+
+    &--telefon,
+    &--email,
+    &--add {
+      width: 167px;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .order-form__input {
+    font-size: 19px;
+
+    &--personal {
+      flex-grow: 1;
+      padding-left: 15px;
+      padding-bottom: 13px;
+    }
+
+    &--telefon,
+    &--email {
+      width: 501px;
+      padding: 14px 60px 12px 16px;
+      background-color: @gray-bg;
+    }
+
+    &--add {
+      width: 501px;
+    }
+  }
+
+  .order-form__fieldset {
+    margin-bottom: 78px;
+
+    &--type {
+      margin-bottom: 12px;
+    }
+
+    &--color {
+      margin-bottom: 46px;
+      padding-top: 66px;
+      padding-bottom: 13px;
+      background-color: @gray-bg;
+    }
+
+    &--personal {
+      margin-bottom: 30px;
+    }
+  }
+
+  .order-form__list {
+    &--color {
+      width: 501px;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &--personal {
+      flex-grow: 1;
+    }
+  }
+
+  .order-form__field {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0;
+
+    &--telefon {
+      background-color: @gray-bg;
+    }
+
+    &--email {
+      background-color: @gray-bg;
+      margin-bottom: 50px;
+    }
+
+    &--telefon .container {
+      padding-top: 48px;
+      padding-bottom: 22px;
+      display: flex;
+      align-items: baseline;
+
+      &::after {
+        right: 75px;
+        bottom: 40px;
+      }
+    }
+
+    &--email .container {
+      padding-bottom: 50px;
+      display: flex;
+      align-items: baseline;
+
+      &::after {
+        right: 71px;
+        bottom: 65px;
+      }
+    }
+
+    &--add {
+      margin-bottom: 52px;
+    }
+  }
+
+  .order-form__note {
+    font-size: 17px;
+    line-height: 30px;
+    order: 2;
     margin: 0;
+  }
 
-    font-size: 14px;
-    line-height: 16px;
-    color: @gray;
+  .order-form__send-button {
+    width: 230px;
+    margin: 0;
+  }
+
+  .order-form__wrapper {
+    display: flex;
+    margin-bottom: 51px;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .order-form__input--type:checked + label::after {
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    left: 16px;
+    top: 0;
+  }
+
+  .order-form__input--color:checked + label::after {
+    background-size: auto;
+    left: 11px;
+    top: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-form__lead .container {
+    padding: 0 225px;
+  }
+
+  .order-form__legend {
+    width: 175px;
+    padding-left: 62px;
+
+    &--type {
+      padding-left: 63px;
+      padding-top: 2px;
+    }
+
+    &--color {
+      padding-left: 60px;
+      padding-top: 2px;
+    }
+  }
+
+  .order-form__list {
+    &--color {
+      width: 875px;
+    }
+
+    &--personal {
+      width: 700px;
+      flex-grow: 0;
+    }
+  }
+
+  .order-form__item {
+    &--color {
+      width: 262px;
+      margin-bottom: 58px;
+
+      &:nth-child(2n+1) {
+        flex-grow: 0;
+      }
+    }
+  }
+
+  .order-form__fieldset {
+    &--type {
+      margin-bottom: 11px;
+    }
+
+    &--color {
+      padding-top: 65px;
+      padding-bottom: 11px;
+    }
+  }
+
+  .order-form__label {
+    &--telefon,
+    &--add {
+      padding-left: 62px;
+      width: 175px;
+    }
+
+    &--email {
+      padding-left: 61px;
+      width: 175px;
+    }
+  }
+
+  .order-form__input {
+    &--telefon,
+    &--email,
+    &--add {
+      width: 700px;
+    }
+  }
+
+  .order-form__field {
+    &--telefon .container {
+      &::after {
+        right: 233px;
+      }
+    }
+
+    &--email .container {
+      &::after {
+        right: 229px;
+      }
+    }
+
+    &--add {
+      margin-bottom: 49px;
+    }
+  }
+
+  .order-form__wrapper {
+    padding: 0 175px;
+    margin-bottom: 50px;
   }
 }
