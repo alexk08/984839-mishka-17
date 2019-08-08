@@ -47,8 +47,24 @@
 }
 
 .nav__item {
-  // min-height: 79px;
   box-shadow: inset 0 1px 0 0 @light-gray;
+
+  &--cart a {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      width: 21px;
+      height: 19px;
+      background-image: url("../img/icon-cart.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0px;
+      position: absolute;
+      top: 31px;
+      left: 30px;
+    }
+  }
 }
 
 .nav__delivery {
@@ -74,6 +90,20 @@
 
 .nav__search-form {
   padding: 28px 0 27px 76px;
+  position: relative;
+
+  &::before {
+    content: "";
+
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icon-search.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    top: 32px;
+    left: 32px;
+  }
 }
 
 .nav__search-input::placeholder {
