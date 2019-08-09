@@ -29,7 +29,7 @@
 
 .promo__item--interior a::before {
   content: "";
-    
+
   width: 40px;
   height: 62px;
   background-image: url("../img/icon-interior.svg");
@@ -46,7 +46,7 @@
 
 .promo__item--toys a::before {
   content: "";
-    
+
   width: 60px;
   height: 60px;
   background-image: url("../img/icon-toy.svg");
@@ -134,8 +134,8 @@
 
 @media (min-width: @desktop-width) {
   .promo {
-    margin-top: -59px;
-    margin-bottom: 109px;
+    margin-top: -58px;
+    margin-bottom: 56px;
 
     &::before {
       height: 34px;
@@ -150,7 +150,7 @@
     line-height: 57px;
 
     width: 615px;
-    margin-top: 155px;
+    margin-top: 154px;
   }
 
   .promo__list {
@@ -159,6 +159,11 @@
 
   .promo__item a {
     padding-left: 36px;
+    padding-right: 100px;
     padding-bottom: 45px;
+
+    &::before {
+      bottom: 41px;
+    }
   }
 }

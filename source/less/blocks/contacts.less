@@ -62,6 +62,7 @@
 }
 
 .contacts__map {
+  display: block;
   position: absolute;
   top: 274px;
 }
@@ -133,14 +134,23 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    position: static;
-    margin-bottom: 96px;
+    margin-bottom: 106px;
   }
 
   .contacts .container {
     padding-left: 225px;
     display: flex;
     justify-content: space-between;
+
+    &::before {
+      top: 146px;
+      left: 814px;
+    }
+
+    &::after {
+      top: 62px;
+      left: 113px;
+    }
   }
 
   .contacts__wrapper {
