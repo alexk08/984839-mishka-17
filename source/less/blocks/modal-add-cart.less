@@ -48,13 +48,21 @@
 
 .modal-add-cart__label {
   box-sizing: border-box;
-  border: 2px solid @light-gray;
+  border: 2px solid @gray-transparent;
   width: 82px;
   height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
+  &:hover {
+    border-color: @gray-active;
+  }
+
+  &:active {
+    border-color: @light-green;
+  }
 }
 
 .modal-add-cart__to-cart-button {
@@ -65,4 +73,10 @@
   line-height: 16px;
   border: none;
   width: 260px;
+
+  &:hover,
+  &:active {
+    background-color: @light-green;
+    color: @white;
+  }
 }

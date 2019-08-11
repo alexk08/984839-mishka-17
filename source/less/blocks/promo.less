@@ -27,34 +27,50 @@
   background-color: @light-green;
 }
 
-.promo__item--interior a::before {
-  content: "";
+.promo__item--interior a {
+  background-color: @light-green;
 
-  width: 40px;
-  height: 62px;
-  background-image: url("../img/icon-interior.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  position: absolute;
-  bottom: 18px;
-  right: 36px;
+  &::before {
+    content: "";
+
+    width: 40px;
+    height: 62px;
+    background-image: url("../img/icon-interior.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    bottom: 18px;
+    right: 36px;
+  }
 }
 
 .promo__item--toys {
   background-color: @green;
 }
 
-.promo__item--toys a::before {
-  content: "";
+.promo__item--toys a {
+  background-color: @green;
 
-  width: 60px;
-  height: 60px;
-  background-image: url("../img/icon-toy.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  position: absolute;
-  bottom: 22px;
-  right: 27px;
+  &::before {
+    content: "";
+
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/icon-toy.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    bottom: 22px;
+    right: 27px;
+  }
+}
+
+.promo__item {
+  &:hover,
+  &:active {
+    padding-bottom: 5px;
+    margin-top: -5px;
+  }
 }
 
 .promo__item a {
@@ -65,10 +81,22 @@
 
   display: block;
   padding: 25px 120px 30px 28px;
-}
 
-.promo__item--toys a {
-  padding: 25px 120px 30px 28px;
+  &::before {
+    opacity: 0.5;
+  }
+
+  &:hover::before {
+    opacity: 0.7;
+  }
+
+  &:active {
+    color: @white-active;
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -78,7 +106,6 @@
     margin-top: -59px;
     margin-bottom: 41px;
     position: relative;
-    z-index: -1;
 
     &::before {
       content: "";
@@ -91,6 +118,7 @@
       background-repeat: repeat-x;
       bottom: -8px;
       left: 0;
+      z-index: 1;
     }
   }
 
@@ -116,9 +144,7 @@
     font-size: 20px;
     line-height: 30px;
     padding: 28px 0 35px 34px;
-  }
 
-  .promo__item--interior a {
     &::before {
       bottom: 31px;
     }
@@ -126,7 +152,6 @@
 
   .promo__item--toys a {
     &::before {
-      bottom: 31px;
       right: 34px;
     }
   }

@@ -19,7 +19,7 @@
           </a>
           <button class="nav__button-menu js-button-menu" type="button"><span class="visually-hidden">Меню</span></button>
           <ul class="nav__list nav__list--left">
-            <li class="nav__item nav__item--catalog"><a>Каталог товаров</a></li>
+            <li class="nav__item nav__item--catalog nav__item--active"><a>Каталог товаров</a></li>
             <li class="nav__item nav__item--form"><a href="form.html">Вязание на заказ</a></li>
           </ul>
           <ul class="nav__list nav__list--right">
@@ -101,12 +101,13 @@
 
       <section class="video">
         <div class="container">
-          <div class="video__image">
+          <div class="video__box">
             <picture>
               <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg">
               <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg">
               <img src="img/video-mobile.jpg" alt="Видео процесса производства">
             </picture>
+            <button class="video__play-button" type="button"><img src="img/icon-play.svg" alt="Кнопка воспроизведения видео"></button>
           </div>
           <div class="video__description">
             <h2 class="video__title">Процесс производства</h2>

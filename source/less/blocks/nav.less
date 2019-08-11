@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  z-index: 1;
 }
 
 .nav__button-menu {
@@ -26,6 +27,14 @@
 
   display: block;
   padding: 22px 0 22px 116px;
+
+  &:hover:not(.nav__logo--active) {
+    opacity: 0.6;
+  }
+
+  &:active:not(.nav__logo--active) {
+    opacity: 0.3;
+  }
 }
 
 .nav__logo-image {
@@ -81,6 +90,21 @@
 
   display: block;
   padding: 28px 0 27px 76px;
+
+  &:hover {
+    color: @black-hover;
+  }
+
+  &:active {
+    color: @black-active;
+  }
+}
+
+.nav__item--active a {
+  &:hover,
+  &:active {
+    color: @black;
+  }
 }
 
 .nav__search-input {

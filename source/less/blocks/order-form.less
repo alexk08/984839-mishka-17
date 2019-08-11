@@ -96,6 +96,14 @@
       left: 0;
       top: -10px;
     }
+
+    &:hover::before {
+      border-color: @light-green;
+    }
+
+    &:active::before {
+      border-color: @gray-active;
+    }
   }
 
   &--type {
@@ -176,10 +184,17 @@
 
   font-size: 17px;
   line-height: 18px;
+  color: @gray;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-bottom-color: @light-green;
+  }
 
   &--personal {
     &::placeholder {
-      color: rgba(68, 68, 68, 0.3);
+      color: @gray-active;
     }
   }
 
@@ -190,7 +205,7 @@
     border-bottom: 2px solid @black;
 
     &::placeholder {
-      color: rgba(68, 68, 68, 0.3);
+      color: @gray-active;
       font-size: 19px;
     }
   }
@@ -202,7 +217,7 @@
     border-bottom: 2px solid @black;
 
     &::placeholder {
-      color: rgba(68, 68, 68, 0.3);
+      color: @gray-active;
     }
   }
 
@@ -214,8 +229,14 @@
     resize: none;
     border: 2px solid @black;
 
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: @light-green;
+    }
+
     &::placeholder {
-      color: rgba(68, 68, 68, 0.3);
+      color: @gray-active;
     }
   }
 }
