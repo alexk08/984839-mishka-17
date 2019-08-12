@@ -1,8 +1,3 @@
-// .catalog-card {
-//     display: flex;
-//     flex-direction: column;
-// }
-
 .catalog-card__link {
   color: @black;
   display: block;
@@ -17,6 +12,14 @@
   font-weight: 700;
   margin: 0;
   padding: 0;
+  
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .catalog-card__description {
@@ -40,8 +43,42 @@
 }
 
 .catalog-card__box {
-  padding: 26px 33px 27px 27px;
+  padding: 26px 26px 27px 27px;
   border: 1px solid @light-gray;
+  position: relative;
+
+  &::before {
+    content: "";
+
+    width: 204px;
+    height: 1px;
+    background-color: @light-gray;
+    position: absolute;
+    left: 28px;
+    bottom: 72px;
+  }
+
+  &:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.catalog-card__to-cart-button {
+  display: block;
+  width: 20px;
+  height: 19px;
+  background-image: url("../img/icon-cart.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.catalog-card__row {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (min-width: @tablet-width) {
@@ -56,13 +93,15 @@
     padding-right: 73px;
     display: flex;
     flex-direction: column;
-  }
 
-  // .catalog-card + .catalog-card__link {
-  //   width: 334px;
-  //   height: 334px;
-  //   display: flex;
-  // }
+    &::before {
+      content: "";
+  
+      width: 268px;
+      left: 30px;
+      bottom: 72px;
+    }
+  }
 
   .catalog-card__title {
     font-size: 20px;
@@ -70,11 +109,20 @@
 
   .catalog-card__description {
     font-size: 15px;
-    margin-bottom: auto;
+    margin-bottom: 0;
+  }
+
+  .catalog-card__row {
+    margin-top: auto;
+    padding-left: 3px;
   }
 
   .catalog-card__price {
     font-size: 17px;
+  }
+
+  .catalog-card__to-cart-button {
+    margin-right: -41px;
   }
 }
 
@@ -88,11 +136,29 @@
     min-height: 197px;
     padding-right: 54px;
     flex-grow: 1;
+
+    &::before {
+      width: 256px;
+      left: 26px;
+    }
   }
 
-  // .catalog-card__link {
-  //   &--title {
-  //     flex-grow: 1;
-  //   }
-  // }
+  .catalog-card__row {
+    padding-left: 0;
+  }
+
+  .catalog-card__to-cart-button {
+    margin-right: -22px;
+  }
+
+  .catalog-card__link--title {
+    margin-bottom: 5px;
+  }
 }
+
+
+// .item_back_copy { 
+//   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+// }
+
+// inset <сдвиг по x> <сдвиг по y> <радиус размытия> <растяжение> <цвет>

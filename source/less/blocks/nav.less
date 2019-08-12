@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  z-index: 1;
 }
 
 .nav__button-menu {
@@ -26,6 +27,14 @@
 
   display: block;
   padding: 22px 0 22px 116px;
+
+  &:hover:not(.nav__logo--active) {
+    opacity: 0.6;
+  }
+
+  &:active:not(.nav__logo--active) {
+    opacity: 0.3;
+  }
 }
 
 .nav__logo-image {
@@ -47,8 +56,29 @@
 }
 
 .nav__item {
-  // min-height: 79px;
   box-shadow: inset 0 1px 0 0 @light-gray;
+
+  &--cart a {
+    position: relative;
+  }
+
+  &--cart svg {
+    position: absolute;
+    top: 31px;
+    left: 30px;
+    fill: @black;
+    opacity: 0.2;
+  }
+}
+
+.nav__item--cart:hover svg {
+  fill: @light-green;
+  opacity: 1;
+}
+
+.nav__item--cart:active svg {
+  fill: @light-green;
+  opacity: 0.3;
 }
 
 .nav__delivery {
@@ -65,16 +95,59 @@
 
   display: block;
   padding: 28px 0 27px 76px;
+
+  &:hover {
+    color: @black-hover;
+  }
+
+  &:active {
+    color: @black-active;
+  }
+}
+
+.nav__item--active a {
+  &:hover,
+  &:active {
+    color: @black;
+  }
 }
 
 .nav__search-input {
-  padding: 0;
+  font-size: 17px;
+  line-height: 24px;
+  
+  padding: 28px 43px 27px 76px;
   border: none;
+  box-shadow: inset 0 1px 0 0 @light-gray;
 }
 
 .nav__search-form {
-  padding: 28px 0 27px 76px;
+  position: relative;
 }
+
+.nav__search-form svg {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  fill: @black;
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.nav__search-input:hover + svg,
+.nav__search-input + svg:hover {
+  fill: @light-green;
+  opacity: 1;
+}
+
+.nav__search-input:active + svg,
+.nav__search-input + svg:active,
+.nav__search-input:focus + svg,
+.nav__search-input + svg:focus {
+  fill: @light-green;
+  opacity: 0.3;
+}
+
 
 .nav__search-input::placeholder {
   color: @black;
@@ -116,12 +189,17 @@
 
     &--search {
       width: 84px;
-      font-size: 0;
-      line-height: 0;
-      color: transparent;
       border-left: 1px solid @light-gray;
       border-right: 1px solid @light-gray;
     }
+  }
+
+  .nav__search-input {
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+    padding: 0;
+    cursor: pointer;
   }
 
   .nav__item--cart a {
@@ -142,6 +220,16 @@
     margin-left: auto;
     padding-top: 18px;
   }
+
+  .nav__search-form svg {
+    top: 37px;
+    left: 33px;
+  }
+    
+  .nav__item--cart svg {
+    top: 34px;
+    left: 31px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -161,9 +249,6 @@
   }
 
   .nav__logo {
-    // box-shadow: inset 0 1px 0 0 @light-gray;
-
-    // display: block;
     padding: 9px 0 7px;
     order: 1;
   }

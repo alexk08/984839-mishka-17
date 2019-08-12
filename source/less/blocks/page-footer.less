@@ -42,6 +42,21 @@
     margin-top: 50px;
   }
 
+  .page-footer__logo:not(.page-footer__logo--active) svg {
+    fill: @black;
+    opacity: 0.2;
+
+    &:hover {
+      fill: @logo-green;
+      opacity: 1;
+    }
+
+    &:active {
+      fill: @logo-green;
+      opacity: 0.3;
+    }
+  }
+
   .page-footer__social {
     margin-top: 58px;
     margin-left: 75px;

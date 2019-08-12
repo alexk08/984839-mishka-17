@@ -5,6 +5,19 @@
 
 .contacts .container {
   position: relative;
+
+  &::before {
+    content: "";
+    width: 67px;
+    height: 100px;
+    background-image: url("../img/icon-map-pin.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    bottom: 303px;
+    left: 139px;
+    z-index: 1;
+  }
 }
 
 .contacts__wrapper {
@@ -46,9 +59,18 @@
 .contacts__email a {
   color: @gray;
   border-bottom: 1px solid @light-green;
+
+  &:hover {
+    color: @light-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .contacts__map {
+  display: block;
   position: absolute;
   top: 274px;
 }
@@ -56,6 +78,25 @@
 @media (min-width: @tablet-width) {
   .contacts {
     margin-bottom: 57px;
+  }
+
+  .contacts .container {
+    &::before {
+      bottom: 325px;
+      left: 363px;
+    }
+
+    &::after {
+      content: "";
+      width: 47px;
+      height: 81px;
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      position: absolute;
+      top: -15px;
+      right: 53px;
+    }
   }
 
   .contacts__wrapper {
@@ -101,14 +142,23 @@
 
 @media (min-width: @desktop-width) {
   .contacts {
-    position: static;
-    margin-bottom: 96px;
+    margin-bottom: 106px;
   }
 
   .contacts .container {
     padding-left: 225px;
     display: flex;
     justify-content: space-between;
+
+    &::before {
+      top: 146px;
+      left: 814px;
+    }
+
+    &::after {
+      top: 62px;
+      left: 113px;
+    }
   }
 
   .contacts__wrapper {

@@ -1,5 +1,6 @@
 .week-product {
-  margin-bottom: 69px;
+  padding-bottom: 42px;
+  margin-bottom: 27px;
   position: relative;
 
   &::before {
@@ -8,10 +9,10 @@
     width: 100%;
     height: 6px;
     background-image: url("../img/bg-zigzag-line.svg");
-    background-size: contain;
+    background-size: auto 6px;
     background-position: 0 0;
-    background-repeat: repeat;
-    bottom: -45px;
+    background-repeat: repeat-x;
+    bottom: 0;
     left: 0;
   }
 }
@@ -100,12 +101,13 @@
 
 @media (min-width: @tablet-width) {
   .week-product {
-    margin-bottom: 118px;
+    padding-bottom: 70px;
+    margin-bottom: 48px;
 
     &::before {
       height: 15px;
-      background-size: contain;
-      bottom: -69px;
+      background-size: auto 15px;
+      background-position: 24px 0;
     }
   }
 
@@ -187,13 +189,30 @@
 
 @media (min-width: @desktop-width) {
   .week-product {
-    margin-bottom: 156px;
+    padding-bottom: 0;
+    margin-bottom: 61px;
+  }
+
+  .week-product::before {
+    display: none;
+  }
+
+  .week-product .container {
+    padding-bottom: 95px;
+    padding-top: 53px;
+    position: relative;
 
     &::before {
       content: "";
-      height: 23px;
-      background-size: auto;
-      bottom: -96px;
+      position: absolute;
+      width: 1050px;
+      height: 21px;
+      background-image: url(../img/bg-zigzag-line.svg);
+      background-size: auto 21px;
+      background-position: -28px 0;
+      background-repeat: repeat-x;
+      bottom: 0;
+      left: 51px;
     }
   }
 
@@ -207,7 +226,7 @@
 
   .week-product__mark {
     left: 94px;
-    top: 16px;
+    top: 69px;
   }
 
   .week-product__left-column {
@@ -229,5 +248,6 @@
 
   .week-product__image {
     z-index: -1;
+    bottom: 95px;
   }
 }

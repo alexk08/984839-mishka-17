@@ -1,5 +1,6 @@
 .reviews {
-  margin-bottom: 86px;
+  padding-bottom: 51px;
+  margin-bottom: 35px;
   position: relative;
 
   &::before {
@@ -7,11 +8,11 @@
     position: absolute;
     width: 100%;
     height: 6px;
-    background-image: url("../img/bg-zigzag-line.svg");
-    background-size: 92%;
+    background-image: url(../img/bg-zigzag-line.svg);
+    background-size: auto 6px;
     background-position: 0 0;
-    background-repeat: repeat;
-    bottom: -51px;
+    background-repeat: repeat-x;
+    bottom: 0px;
     left: 0;
   }
 }
@@ -87,28 +88,22 @@
 
 @media (min-width: @tablet-width) {
   .reviews {
-    margin-bottom: 147px;
-    // padding-top: 77px;
-    // padding-bottom: 16px;
-    // background-image: url("../img/review@1x.jpg");
-    // background-repeat: no-repeat;
-    // background-position: 0 0;
+    padding-bottom: 87px;
+    margin-bottom: 60px;
 
     &::before {
-      height: 14px;
-      background-size: 90%;
-      bottom: -85px;
+      height: 15px;
+      background-size: auto 15px;
+      background-position: 24px 0;
     }
   }
 
   .reviews .container {
     position: relative;
 
-    // margin-bottom: 200px;
     padding-top: 77px;
     padding-bottom: 16px;
 
-    // background-color: @gray-bg;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
@@ -177,13 +172,32 @@
 
 @media (min-width: @desktop-width) {
   .reviews {
-    margin-bottom: 162px;
+    padding-bottom: 0;
+    margin-bottom: 70px;
+
+    &::before {
+      display: none;
+    }
   }
 
   .reviews .container {
     background-position: 50px 7px;
-    padding-bottom: 65px;
+    padding-bottom: 157px;
     padding-left: 225px;
+    position: relative;
+    // margin-bottom: 156px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1050px;
+      height: 23px;
+      background-image: url(../img/bg-zigzag-line.svg);
+      background-size: auto 21px;
+      background-position: -28px 0;
+      background-repeat: repeat-x;
+      bottom: 0px;
+      left: 51px;
+    }
   }
 
   .reviews__title {
@@ -209,6 +223,6 @@
   }
 
   .reviews__toggles {
-    bottom: 111px;
+    bottom: 202px;
   }
 }

@@ -27,29 +27,85 @@
   background-color: @light-green;
 }
 
+.promo__item--interior a {
+  background-color: @light-green;
+
+  &::before {
+    content: "";
+
+    width: 40px;
+    height: 62px;
+    background-image: url("../img/icon-interior.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    bottom: 18px;
+    right: 36px;
+  }
+}
+
 .promo__item--toys {
   background-color: @green;
 }
 
+.promo__item--toys a {
+  background-color: @green;
+
+  &::before {
+    content: "";
+
+    width: 60px;
+    height: 60px;
+    background-image: url("../img/icon-toy.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    position: absolute;
+    bottom: 22px;
+    right: 27px;
+  }
+}
+
+.promo__item {
+  &:hover,
+  &:active {
+    padding-bottom: 5px;
+    margin-top: -5px;
+  }
+}
+
 .promo__item a {
+  position: relative;
   font-size: 19px;
   font-weight: bold;
   color: @white;
 
   display: block;
-  padding: 30px 0 25px 28px;
-}
+  padding: 25px 120px 30px 28px;
 
-.promo__item--toys a {
-  padding: 25px 0 30px 28px;
+  &::before {
+    opacity: 0.5;
+  }
+
+  &:hover::before {
+    opacity: 0.7;
+  }
+
+  &:active {
+    color: @white-active;
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
   .promo {
     background-image: url("../img/hero-tablet@1x.jpg");
     background-position: 50% 0;
-    margin-top: -60px;
+    margin-top: -59px;
     margin-bottom: 41px;
+    position: relative;
 
     &::before {
       content: "";
@@ -57,11 +113,12 @@
       width: 100%;
       height: 24px;
       background-image: url("../img/bg-zigzag-fill.svg");
-      background-size: 100%;
+      background-size: contain;
       background-position: 0 0;
-      background-repeat: repeat;
-      top: 823px;
+      background-repeat: repeat-x;
+      bottom: -8px;
       left: 0;
+      z-index: 1;
     }
   }
 
@@ -69,7 +126,7 @@
     font-size: 43px;
     line-height: 50px;
 
-    margin-top: 155px;
+    margin-top: 154px;
     width: 500px;
   }
 
@@ -87,17 +144,29 @@
     font-size: 20px;
     line-height: 30px;
     padding: 28px 0 35px 34px;
+
+    &::before {
+      bottom: 31px;
+    }
+  }
+
+  .promo__item--toys a {
+    &::before {
+      right: 34px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .promo {
-    margin-top: -59px;
-    margin-bottom: 109px;
+    margin-top: -58px;
+    margin-bottom: 56px;
 
     &::before {
       height: 34px;
-      top: 818px;
+      bottom: -3px;
+      background-size: auto 37px;
+      left: 12px;
     }
   }
 
@@ -106,7 +175,7 @@
     line-height: 57px;
 
     width: 615px;
-    margin-top: 155px;
+    margin-top: 154px;
   }
 
   .promo__list {
@@ -115,6 +184,11 @@
 
   .promo__item a {
     padding-left: 36px;
+    padding-right: 100px;
     padding-bottom: 45px;
+
+    &::before {
+      bottom: 41px;
+    }
   }
 }
