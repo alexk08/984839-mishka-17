@@ -131,19 +131,15 @@
   left: 32px;
   fill: @black;
   opacity: 0.2;
-  cursor: pointer;
 }
 
-.nav__search-input:hover + svg,
-.nav__search-input + svg:hover {
+.nav__item--search:hover svg {
   fill: @light-green;
   opacity: 1;
 }
 
-.nav__search-input:active + svg,
-.nav__search-input + svg:active,
-.nav__search-input:focus + svg,
-.nav__search-input + svg:focus {
+.nav__item--search:active svg,
+.nav__item--search:focus svg {
   fill: @light-green;
   opacity: 0.3;
 }
@@ -152,6 +148,15 @@
 .nav__search-input::placeholder {
   color: @black;
   font-weight: 700;
+}
+
+.nav__search-input:hover::placeholder {
+  opacity: 0.6;
+}
+
+.nav__search-input:active::placeholder,
+.nav__search-input:focus::placeholder {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
@@ -191,15 +196,29 @@
       width: 84px;
       border-left: 1px solid @light-gray;
       border-right: 1px solid @light-gray;
+      cursor: pointer;
     }
   }
 
   .nav__search-input {
-    font-size: 0;
-    line-height: 0;
-    color: transparent;
-    padding: 0;
-    cursor: pointer;
+    // font-size: 0;
+    // line-height: 0;
+    // color: transparent;
+    // padding: 0;
+    // cursor: pointer;
+    display: none;
+  }
+
+  // .nav__item--search:hover input,
+  .nav__item--search:active input,
+  .nav__item--search:focus input,
+  .nav__search-input:focus {
+    display: block;
+    position: absolute;
+    top: 64px;
+    left: 0px;
+    padding: 0px 0 0 11px;
+    width: 82px;
   }
 
   .nav__item--cart a {

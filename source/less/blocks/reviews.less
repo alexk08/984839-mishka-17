@@ -76,6 +76,14 @@
   cursor: pointer;
   background-repeat: no-repeat;
   background-position: 37px 12px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .reviews__toggle-prev {
@@ -107,6 +115,11 @@
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px auto;
+    }
   }
 
   .reviews__title {
@@ -145,15 +158,11 @@
 
   .reviews__toggle-prev,
   .reviews__toggle-next {
-    // width: 130px;
-    // height: 52px;
     width: 50px;
     height: 26px;
 
-    // background-color: @white;
     border: none;
     background-position: 0 0;
-    // cursor: pointer;
   }
 
   .reviews__toggle-next {
@@ -185,7 +194,6 @@
     padding-bottom: 157px;
     padding-left: 225px;
     position: relative;
-    // margin-bottom: 156px;
     &::before {
       content: "";
       position: absolute;

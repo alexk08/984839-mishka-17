@@ -25,6 +25,32 @@
   display: none;
 }
 
+.page-footer__copyright-link {
+  width: 182px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  &:hover svg {
+    fill: @logo-green
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__copyright-link svg {
+  fill: @light-green;
+}
+
+.page-footer__copyright-text {
+  font-size: 19px;
+  line-height: 18px;
+  font-weight: 700;
+  color: @black;
+}
+
 @media (min-width: @tablet-width) {
   .page-footer .container {
     min-height: 143px;
@@ -44,11 +70,9 @@
 
   .page-footer__logo:not(.page-footer__logo--active) svg {
     fill: @black;
-    opacity: 0.2;
 
     &:hover {
       fill: @logo-green;
-      opacity: 1;
     }
 
     &:active {
@@ -62,7 +86,7 @@
     margin-left: 75px;
   }
 
-  .page-footer__copyright.copyright {
-    margin-top: 55px;
+  .page-footer__copyright-link {
+    margin-top: 56px;
   }
 }
