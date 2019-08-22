@@ -49,12 +49,12 @@
               <img class="nav__logo-image" src="img/logo-mobile.svg" alt="Логотип интернет-магазина «Мишка»">
             </picture>
           </a>
-          <button class="nav__button-menu js-button-menu" type="button"><span class="visually-hidden">Меню</span></button>
-          <ul class="nav__list nav__list--left js-menu-close">
+          <button class="nav__button-menu no-js" type="button"><span class="visually-hidden">Меню</span></button>
+          <ul class="nav__list nav__list--left no-js">
             <li class="nav__item nav__item--catalog"><a href="catalog.html">Каталог товаров</a></li>
             <li class="nav__item nav__item--form"><a href="form.html">Вязание на заказ</a></li>
           </ul>
-          <ul class="nav__list nav__list--right js-menu-close">
+          <ul class="nav__list nav__list--right no-js">
             <li class="nav__item nav__item--search" tabindex="1">
               <form class="nav__search-form" action="https://echo.htmlacademy.ru" method="get">
                 <svg width="18" height="18">
@@ -289,7 +289,12 @@
       });
     </script>
     <script>
-      var menuButton = document.querySelector(".js-button-menu");
+      document.querySelector(".nav__button-menu").classList.remove("no-js");
+      document.querySelector(".nav__list--right").classList.remove("no-js");
+      document.querySelector(".nav__list--left").classList.remove("no-js");
+      document.querySelector(".nav__list--right").classList.add("js-menu-close");
+      document.querySelector(".nav__list--left").classList.add("js-menu-close");
+      var menuButton = document.querySelector(".nav__button-menu");
       var menuList = document.querySelectorAll(".js-menu-close");
 
       menuButton.addEventListener("click", function (evt) {
@@ -298,12 +303,12 @@
           menu = menuList[i];
           if (menu.classList.contains("js-menu-close")) {
             menu.classList.remove("js-menu-close");
-            menuButton.classList.remove("js-button-menu");
-            menuButton.classList.add("js-button-menu-close");
+            menu.classList.add("js-menu");
+            menuButton.classList.add("active");
           } else {
+            menu.classList.remove("js-menu");
             menu.classList.add("js-menu-close");
-            menuButton.classList.add("js-button-menu");
-            menuButton.classList.remove("js-button-menu-close");
+            menuButton.classList.remove("active");
           }
         }
       });
