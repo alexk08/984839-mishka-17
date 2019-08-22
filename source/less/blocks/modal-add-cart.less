@@ -1,3 +1,18 @@
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -2000px);
+  }
+  70% {
+    transform: translate(-50%, -45%);
+  }
+  90% {
+    transform: translate(-50%, -52%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
 .modal-add-cart {
   min-height: 337px;
   border-top: 1px solid @dark-gray;
@@ -12,6 +27,11 @@
   background-color: @white;
 
   padding: 30px 30px 43px;
+
+  &.show {
+    display: block;
+    animation: bounce 0.6s;
+  }
 }
 
 .modal-add-cart__title {
@@ -88,7 +108,7 @@
 @media (min-width: 768px) {
   .modal-add-cart {
     width: 568px;
-    min-height: 338px; 
+    min-height: 338px;
     border: 1px solid @dark-gray;
     padding: 33px 106px 30px;
   }
@@ -106,7 +126,7 @@
     font-size: 17px;
     margin-bottom: 21px;
   }
-  
+
   .modal-add-cart__label {
     width: 112px;
   }
