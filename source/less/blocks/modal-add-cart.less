@@ -2,12 +2,15 @@
   0% {
     transform: translate(-50%, -2000px);
   }
+
   70% {
     transform: translate(-50%, -45%);
   }
+
   90% {
     transform: translate(-50%, -52%);
   }
+
   100% {
     transform: translate(-50%, -50%);
   }
@@ -87,6 +90,15 @@
   &:active {
     border-color: @light-green;
   }
+}
+
+.modal-add-cart__input:checked + label {
+  border-color: @light-green;
+}
+
+.modal-add-cart__input:focus + label {
+  outline: auto;
+  outline-color: @outline;
 }
 
 .modal-add-cart__to-cart-button {

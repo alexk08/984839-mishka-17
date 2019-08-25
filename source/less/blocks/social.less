@@ -1,11 +1,11 @@
-.social {
-  &__list {
-    .list-reset;
-    width: 141px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.social__list {
+  .list-reset;
+  margin-top: 26px;
+  margin-bottom: 48px;
+  width: 141px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .social__link--insta svg {
@@ -47,5 +47,11 @@
   &:active {
     fill: @logo-green;
     opacity: 0.3;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .social__list {
+    margin: 0;
   }
 }
