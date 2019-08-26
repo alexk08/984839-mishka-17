@@ -19,7 +19,7 @@
   border: 1px solid @light-gray;
   padding: 33px;
   padding-top: 25px;
-  
+
   &:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
   }
@@ -43,7 +43,7 @@
 
     width: 32px;
     height: 32px;
-    background-image: url(../img/icon-video.svg);
+    background-image: url("../img/icon-video.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
     position: absolute;
@@ -80,11 +80,11 @@
   left: calc(50% - 50px);
   top: calc(50% - 38px);
   cursor: pointer;
-  
+
   &:hover {
     transform: scale(1.2);
   }
-  
+
   &:active {
     transform: scale(0.8);
     opacity: 0.3;
@@ -103,6 +103,11 @@
 
   .video__box {
     position: static;
+  }
+
+  .video__image {
+    width: 668px;
+    height: 455px;
   }
 
   .video__play-button {
@@ -139,6 +144,10 @@
 @media (min-width: @desktop-width) {
   .video {
     margin-bottom: 106px;
+  }
+
+  .video__image {
+    width: 682px;
   }
 
   .video .container {

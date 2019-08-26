@@ -1,12 +1,16 @@
 .overlay {
   background-color: @white-toning;
-  position: fixed;
+
+  display: none;
   width: 100%;
   height: 100%;
-  z-index: 9;
-  display: none;
 
-  &.show {
-    display: block;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.overlay.show {
+  display: block;
 }

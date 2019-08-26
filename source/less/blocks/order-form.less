@@ -150,6 +150,16 @@
   }
 }
 
+.order-form__input:focus + label::before,
+.order-form__input:focus + label {
+  outline: auto;
+  outline-color: @outline;
+}
+
+.order-form__input:focus + label::before {
+  border-color: @light-green;
+}
+
 .order-form__input--type:checked + label::after,
 .order-form__input--type:active + label::after {
   content: "";
@@ -586,7 +596,7 @@
   }
 
   .order-form__field--add {
-      margin-bottom: 49px;
+    margin-bottom: 49px;
   }
 
   .order-form__wrapper {

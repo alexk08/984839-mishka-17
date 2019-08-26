@@ -2,12 +2,15 @@
   0% {
     transform: translate(-50%, -2000px);
   }
+
   70% {
     transform: translate(-50%, -45%);
   }
+
   90% {
     transform: translate(-50%, -52%);
   }
+
   100% {
     transform: translate(-50%, -50%);
   }
@@ -27,11 +30,11 @@
   background-color: @white;
 
   padding: 30px 30px 43px;
+}
 
-  &.show {
-    display: block;
-    animation: bounce 0.6s;
-  }
+.modal-add-cart.show {
+  display: block;
+  animation: bounce 0.6s;
 }
 
 .modal-add-cart__title {
@@ -87,6 +90,15 @@
   &:active {
     border-color: @light-green;
   }
+}
+
+.modal-add-cart__input:checked + label {
+  border-color: @light-green;
+}
+
+.modal-add-cart__input:focus + label {
+  outline: auto;
+  outline-color: @outline;
 }
 
 .modal-add-cart__to-cart-button {
