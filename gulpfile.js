@@ -96,12 +96,24 @@ gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
-    "source/*.ico"
+    "source/*.ico",
+    "source/js/picturefill.min.js"
   ], {
     base: "source"
   })
   .pipe(gulp.dest("build"));
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "js"));
-gulp.task("start", gulp.series("build", "server"));
+gulp.task("build", gulp.series(
+  "clean",
+  "copy",
+  "css",
+  "sprite",
+  "html",
+  "js"
+));
+
+gulp.task("start", gulp.series(
+  "build",
+  "server"
+));
