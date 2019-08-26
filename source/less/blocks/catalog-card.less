@@ -82,6 +82,11 @@
     display: flex;
   }
 
+  .catalog-card__image {
+    width: 334px;
+    height: 334px;
+  }
+
   .catalog-card__box {
     width: 334px;
     padding-bottom: 26px;
@@ -113,6 +118,16 @@
 @media (min-width: @desktop-width) {
   .catalog-card {
     flex-direction: column;
+    margin-right: 51px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .catalog-card__image {
+    width: 316px;
+    height: 462px;
   }
 
   .catalog-card__box {

@@ -156,6 +156,10 @@
   outline-color: @outline;
 }
 
+.order-form__input:focus + label::before {
+  border-color: @light-green;
+}
+
 .order-form__input--type:checked + label::after,
 .order-form__input--type:active + label::after {
   content: "";
