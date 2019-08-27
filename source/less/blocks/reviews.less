@@ -1,4 +1,10 @@
-.reviews {
+@media (max-width: (@tablet-width - 1px)) {
+  .reviews .container {
+    padding: 0 30px;
+  }
+}
+
+.reviews .container {
   padding-bottom: 51px;
   margin-bottom: 35px;
   position: relative;
@@ -7,19 +13,13 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: 6px;
+    height: 7px;
     background-image: url("../img/bg-zigzag-line.svg");
-    background-size: auto 6px;
-    background-position: 0 0;
+    background-size: 100% 7px;
+    background-position: 8px 0;
     background-repeat: repeat-x;
     bottom: 0;
     left: 0;
-  }
-}
-
-@media (max-width: (@tablet-width - 1px)) {
-  .reviews .container {
-    padding: 0 30px;
   }
 }
 
@@ -95,26 +95,20 @@
 }
 
 @media (min-width: @tablet-width) {
-  .reviews {
-    padding-bottom: 87px;
-    margin-bottom: 60px;
-
-    &::before {
-      height: 15px;
-      background-size: auto 15px;
-      background-position: 24px 0;
-    }
-  }
-
   .reviews .container {
-    position: relative;
-
+    margin-bottom: 60px;
     padding-top: 77px;
-    padding-bottom: 16px;
+    padding-bottom: 103px;
 
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 0;
+
+    &::before {
+      height: 17px;
+      background-size: 100% 17px;
+      background-position: 20px 0;
+    }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/review@2x.jpg");
@@ -153,7 +147,7 @@
 
     position: absolute;
     right: 50px;
-    bottom: 62px;
+    bottom: 148px;
   }
 
   .reviews__toggle-prev,
@@ -183,10 +177,6 @@
   .reviews {
     padding-bottom: 0;
     margin-bottom: 70px;
-
-    &::before {
-      display: none;
-    }
   }
 
   .reviews .container {

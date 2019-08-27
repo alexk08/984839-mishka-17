@@ -59,6 +59,7 @@
 .catalog-card__to-cart-button {
   display: block;
   opacity: 0.2;
+  overflow: hidden;
 
   &:hover {
     fill: @light-green;
@@ -120,7 +121,7 @@
     flex-direction: column;
     margin-right: 51px;
 
-    &:last-child {
+    &:nth-child(3n+1) {
       margin-right: 0;
     }
   }

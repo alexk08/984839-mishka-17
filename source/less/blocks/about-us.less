@@ -42,7 +42,7 @@
       background-repeat: no-repeat;
       background-position: 0 0;
       position: absolute;
-      bottom: 59px;
+      top: 5px;
       left: 8px;
     }
   }
@@ -59,7 +59,7 @@
       background-repeat: no-repeat;
       background-position: 0 0;
       position: absolute;
-      bottom: 67px;
+      top: 6px;
       left: 0;
     }
   }
@@ -76,7 +76,7 @@
       background-repeat: no-repeat;
       background-position: 0 0;
       position: absolute;
-      bottom: 62px;
+      top: 11px;
       left: 7px;
     }
   }
@@ -93,7 +93,7 @@
       background-repeat: no-repeat;
       background-position: 0 0;
       position: absolute;
-      bottom: 58px;
+      top: 8px;
       left: 3px;
     }
   }
@@ -110,7 +110,7 @@
       background-repeat: no-repeat;
       background-position: 0 0;
       position: absolute;
-      bottom: 68px;
+      top: 9px;
       left: -7px;
     }
   }
@@ -127,7 +127,7 @@
       background-repeat: no-repeat;
       background-position: 0 0;
       position: absolute;
-      bottom: 61px;
+      top: 7px;
       left: 3px;
     }
   }
@@ -149,48 +149,66 @@
   .about-us__list {
     font-size: 20px;
     line-height: 22px;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .about-us__item {
     padding-top: 75px;
     margin-bottom: 37px;
-
-    &--eco::before {
-      bottom: 60px;
-      left: 9px;
-    }
-
-    &--style::before {
-      bottom: 70px;
-      left: 1px;
-    }
-
-    &--likes::before {
-      bottom: 66px;
-      left: 8px;
-    }
-
-    &--hand::before {
-      bottom: 60px;
-    }
-
-    &--home::before {
-      bottom: 71px;
-      left: -6px;
-    }
-
-    &--package::before {
-      bottom: 65px;
-    }
-  }
-
-  .about-us__wrapper {
-    display: flex;
-  }
-
-  .about-us__list--left,
-  .about-us__list--right {
     width: 334px;
+
+    &--eco {
+      order: 0;
+
+      &::before {
+        top: 21px;
+        left: 9px;
+      }
+    }
+
+    &--style {
+      order: 2;
+
+      &::before {
+        top: 22px;
+        left: 1px;
+      }
+    }
+
+    &--likes {
+      order: 4;
+
+      &::before {
+        top: 26px;
+        left: 8px;
+      }
+    }
+
+    &--hand {
+      order: 1;
+
+      &::before {
+        top: 25px;
+      }
+    }
+
+    &--home {
+      order: 3;
+
+      &::before {
+        top: 25px;
+        left: -6px;
+      }
+    }
+
+    &--package {
+      order: 5;
+
+      &::before {
+        top: 22px;
+      }
+    }
   }
 }
 
@@ -208,12 +226,8 @@
     line-height: 57px;
   }
 
-  .about-us__list--left,
-  .about-us__list--right {
-    width: 350px;
-  }
-
   .about-us__item {
+    width: 350px;
     margin-bottom: 36px;
   }
 }
