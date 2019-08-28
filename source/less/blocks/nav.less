@@ -5,6 +5,13 @@
   z-index: 1;
 }
 
+.nav__top-row {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid @light-gray;
+  box-shadow: inset 0 1px 0 0 @light-gray;
+}
+
 .nav__button-menu {
   background-color: @white;
   background-image: url("../img/icon-menu-open.svg");
@@ -15,10 +22,7 @@
   height: 78px;
   padding: 0;
   border: none;
-
-  position: absolute;
-  right: 0;
-  top: 1px;
+  align-self: flex-end;
 
   cursor: pointer;
 }
@@ -32,11 +36,8 @@
 }
 
 .nav__logo {
-  box-shadow: inset 0 1px 0 0 @light-gray;
-  border-bottom: 1px solid @light-gray;
-
   display: block;
-  padding: 22px 0 22px 116px;
+  padding: 22px 37px 22px 116px;
 
   &:hover:not(.nav__logo--active) {
     opacity: 0.6;
@@ -113,6 +114,8 @@
 
   display: block;
   padding: 26px 0 28px 76px;
+  margin: 0 auto;
+  width: 320px;
 
   &:hover {
     color: @black-hover;
@@ -140,6 +143,8 @@
 
 .nav__search-form {
   position: relative;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .nav__search-form svg {
@@ -219,6 +224,17 @@
   .nav {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .nav__top-row {
+    display: block;
+    border-bottom: none;
+    box-shadow: none;
+  }
+
+  .nav__item a {
+    margin: 0;
+    width: auto;
   }
 
   .nav__button-menu {
@@ -316,9 +332,12 @@
     }
   }
 
+  .nav__top-row {
+    order: 1;
+  }
+
   .nav__logo {
     padding: 9px 0 7px;
-    order: 1;
   }
 
   .nav__logo-image {
